@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,37 +5,43 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <div id = "maindiv">
-        <h1 align ="center">Simple Interest Calculator</h1>
-        <table>
-            <tr>
-                <td>Amount</td>  
-                <td><input type="number"  id="principal">  </td>
-            </tr>
-            <tr>
-                <td>Interest Rate</td>  
-                <td id="TD"><input type="range" id="interest" min = "0" max = "30" value = "15"></td><td><span id = "rate"></span></td>
-                <td>%</td>
-            </tr>
-            <tr>
-                <td>No. of Years</td> 
-                <td> 
-                    <select id="years">
-                        <!--<option value="0">0</option>-->
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select> 
-                </td>
-            </tr>
-            <tr> 
-                <td><span id="result"></span>
-                    <button onclick="compute()">Compute Interest</button>
-                </td>
-            </tr>
-        </table>
+        <div id = "maindiv">
+            <h1 align="left">Simple Interest Calculator</h1>
+            <div id = "paddingg"><table>
+                <tr>
+                    <td>Amount</td>  
+                    <td><input type="number"  id="principal">  </td>
+                </tr>
+                <tr>
+                    <td>Interest Rate</td>  
+                    <td id="TD"><input type="range" id="interest" min = "0" max = "30" value = "15" onchange="showValue(this.value)"></td><td><span id = "rate">15%</span></td>
+                </tr>
+                <tr>
+                    <td>No. of Years</td> 
+                    <td> 
+                        <select id="years">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select> 
+                    </td>
+                </tr>
+                <tr> 
+                    <td>
+                        <button onclick="submit()">Compute Interest</button>
+                        <br>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+            <span id="result"></span><br><br>
+        </div>
+            <div>
+                <footer>&copy;This calculator belongs to Ujjval.</footer>
+            </div>
         </div>
     </body>
-</html>
+   </html>
