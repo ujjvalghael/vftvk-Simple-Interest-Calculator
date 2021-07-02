@@ -1,6 +1,6 @@
 function submit(){
     if (document.getElementById("principal").value <= 0){
-      alert("Please enter the amount to deposit");
+      alert("Enter positive number");
       document.getElementById("principal").focus();
     }
     else{
